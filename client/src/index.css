@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content .container {
+  max-width: none;
+  padding: 0;
+}
+
+.header {
+  background-color: #111;
+  padding: 20px 0;
+  border-bottom: 2px solid #333;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.main-layout {
+  display: flex;
+  min-height: calc(100vh - 200px);
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #111;
+  border-right: 2px solid #333;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.category-section {
+  margin-bottom: 30px;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ccc;
+  cursor: pointer;
+  padding: 15px 10px;
+  border: 1px solid #444;
+  background-color: #222;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.category-title:hover {
+  background-color: #333;
+  border-color: #555;
+}
+
+.category-title.active {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topic-item {
+  cursor: pointer;
+  padding: 12px 15px;
+  margin: 5px 0;
+  background-color: #222;
+  border-left: 3px solid #444;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.topic-item:hover {
+  background-color: #333;
+  border-left-color: #666;
+  color: #fff;
+}
+
+.topic-item.active {
+  background-color: #444;
+  border-left-color: #fff;
+  color: #fff;
+  font-weight: 500;
+}
+
+.content {
+  flex: 1;
+  background-color: #000;
+}
+
+.content-container {
+  padding: 40px;
+  max-width: none;
+}
+
+.topic-section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: #111;
+  border: 1px solid #333;
+}
+
+.topic-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 30px 0 15px 0;
+  color: #ccc;
+  font-weight: 300;
+}
+
+.explanation {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.code-block {
+  background-color: #000;
+  border: 1px solid #444;
+  padding: 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.questions-list {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.question-item {
+  background-color: #222;
+  margin: 15px 0;
+  padding: 20px;
+  border-left: 4px solid #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.question-item:hover {
+  background-color: #333;
+  border-left-color: #777;
+}
+
+.question-text {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.answer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.answer.hidden {
+  display: none;
+}
+
+.key-points {
+  background-color: #1a1a1a;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #666;
+}
+
+.key-points h4 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.key-points ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.key-points li {
+  margin: 8px 0;
+  color: #ddd;
+}
+
+.footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 2px solid #333;
+  }
+  
+  .sidebar-content {
+    padding: 15px;
+  }
+  
+  .category-title {
+    font-size: 1rem;
+    padding: 12px 8px;
+  }
+  
+  .topic-item {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .topic-title {
+    font-size: 1.5rem;
+  }
+  
+  .content-container {
+    padding: 20px;
+  }
+  
+  .topic-section {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+}
